@@ -851,3 +851,224 @@ body.lock {
     display: none;
   }
 }
+
+/*REVIEWS*/
+.reviews-wrapper {
+  padding: 160px 30px 150px 30px;
+}
+
+.reviews {
+  position: relative;
+}
+
+.reviews__title {
+  display: inline-block;
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 125%;
+  letter-spacing: 0.2px;
+  color: #090F4E;
+  position: relative;
+  z-index: 2;
+  margin: 0px 0px 64px 0px;
+}
+
+.reviews__img {
+  display: block;
+  position: absolute;
+  left: -50px;
+  top: -54px;
+  z-index: 1;
+}
+
+.slider {
+  overflow: hidden;
+}
+
+.slide {
+  display: inline-block;
+}
+
+.slide__title {
+  font-size: 24px;
+  line-height: 167%;
+  letter-spacing: 0.16px;
+  color: #090F4E;
+  margin: 0px 0px 18px 0px;
+  max-width: 460px;
+}
+
+.slide__text {
+  font-size: 15px;
+  line-height: 187%;
+  color: #63657E;
+  margin: 0px 0px 36px 0px;
+  max-width: 460px;
+}
+
+.slide__commentator {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.slide__photo {
+  margin: 0px 20px 0px 0px;
+}
+
+.slide__commentator-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.slide__name {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #090F4E;
+}
+
+.slide__position {
+  font-size: 14px;
+  line-height: 28px;
+  color: #63657E;
+}
+
+/* Стрелка */
+.slick-arrow {
+  position: absolute;
+  top: 20px;
+  right: 0px;
+}
+
+/* Стрелка влево */
+.slick-arrow.slick-prev {
+  font-size: 0px;
+  background: url("../IMG/arrowTrue.png") 0 0 no-repeat;
+  width: 32px;
+  height: 32px;
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  right: 70px;
+  top: 20px;
+}
+
+/* Стрелка вправо */
+.slick-arrow.slick-next {
+  font-size: 0px;
+  background: url("../IMG/arrowTrue.png") 0 0 no-repeat;
+  width: 32px;
+  height: 32px;
+}
+
+/* Стрелка не активная */
+.slick-arrow.slick-prev.slick-disabled,
+.slick-arrow.slick-next.slick-disabled {
+  background: url("../IMG/arrow-false.png") 0 0 no-repeat;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  top: 23px;
+  width: 25px;
+  height: 25px;
+  cursor: default;
+}
+
+.slick-arrow.slick-next.slick-disabled {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+/*ADAPTIVE*/
+@media (max-width: 1250px) {
+  .reviews-wrapper {
+    padding: 130px 0px 100px 0px;
+  }
+  .reviews__img {
+    display: none;
+  }
+}
+
+@media (max-width: 967px) {
+  .reviews-wrapper {
+    padding: 50px 0px 50px 0px;
+  }
+  .slide {
+    margin: 0 auto;
+  }
+  .slide {
+    display: inline-block;
+    border-top: 2px solid #EBF0F4;
+    border-bottom: 2px solid #EBF0F4;
+    border-radius: 15px;
+    padding: 10px 0px;
+  }
+  .slide__title {
+    font-size: 22px;
+    margin: 0px 0px 10px 0px;
+  }
+  .slide__text {
+    font-size: 12px;
+    margin: 0px 0px 15px 0px;
+  }
+  .slide__commentator {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .slide__photo {
+    margin: 0px 20px 0px 0px;
+  }
+  .slide__commentator-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .slide__name {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #090F4E;
+  }
+  .slide__position {
+    font-size: 14px;
+    line-height: 28px;
+    color: #63657E;
+  }
+}
+
+@media (max-width: 425px) {
+  .reviews-wrapper {
+    padding: 20px 0px 20px 0px;
+  }
+  .reviews {
+    position: relative;
+  }
+  .reviews__title {
+    font-size: 36px;
+    text-align: center;
+    margin: 0px 0px 30px 0px;
+  }
+}

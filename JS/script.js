@@ -16,3 +16,32 @@ document.addEventListener('click', (event) => {
 	}
 });
 /*=======================================================================================*/
+
+/*SLIDER*/
+$('.slider').slick({
+	infinite: false,
+  	slidesToShow: 2,
+  	slidesToScroll: 2,
+	  	responsive: [
+			{
+				breakpoint: 967,
+				settings: {
+					infinite: false,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+				}
+			},
+			{
+				breakpoint: 425,
+				settings: {
+					infinite: true,
+					slidesToShow: 1,
+					slidesToScroll: 1,
+					autoplay: true,
+					arrows: false,
+					autoplaySpeed: 3000
+				}
+			}
+	  	]
+});
+/*=======================================================================================*/

@@ -732,6 +732,7 @@ body.lock {
 }
 .slider {
 	overflow: hidden;
+	align-items: center;
 }
 .slide {
 	display: inline-block;
@@ -895,15 +896,16 @@ body.lock {
 /*SUBSCRIBE*/
 .subscribe-wrapper {
 	background: #F0F4FF;
+	padding: 95px 0;
 }
 .subscribe {
-
 	&__title {
 		font-weight: 600;
 		font-size: 30px;
 		line-height: 243%;
 		text-align: center;
 		color: #090F4E;
+		
 	}
 
 	&__description {
@@ -911,6 +913,7 @@ body.lock {
 		line-height: 200%;
 		text-align: center;
 		color: #63657E;
+		margin: 32px 0px;
 	}
 
 	&__radiobutton-block {
@@ -920,7 +923,8 @@ body.lock {
 		color: #63657E;
 		display: flex;
 		align-items: center;
-
+		justify-content: center;
+		margin: 0px auto 80px;
 	}
 
 	&__radiobutton {
@@ -948,29 +952,302 @@ body.lock {
 		}
 	}
 
+	&__cards-wrapper:nth-child(2) {
+		margin: 0px 30px;
+	}
 	&__cards-wrapper {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 	}
 }
 .card-subs {
+	&:nth-child(2) {
+		margin: 0px 30px;
+	}
+	background: #FFFFFF;
+	border: 2px solid #F5F6FA;
+	box-sizing: border-box;
+	border-radius: 15px;
+	padding: 43px 23px 51px 42px;
+	max-width: 350px;
+	&__title {
+		font-style: normal;
+		font-weight: 600;
+		font-size: 28px;
+		line-height: 139%;
+		color: #090F4E;
+		margin: 0px 0px 20px 0px;
+	}
 
-		&__title {
-		}
+	&__description {
+		font-size: 16px;
+		line-height: 187%;
+		color: #63657E;
+		margin: 0px 0px 18px 0px;
+	}
 
-		&__description {
+	&__cost {
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 137%;
+		color: #63657E;
+		margin: 0px 0px 37px 0px;
+		.costCSS {
+			font-weight: 600;
+			font-size: 42px;
+			line-height: 121%;
+			color: #090F4E;
+			margin: 0px 5px 0px 0px;
 		}
+	}
 
-		&__cost {
+	&__list {
+		position: relative;
+		padding: 30px 0px 0px 0px;
+		margin: 0px 0px 40px 0px;
+		:not(:last-child) {
+			margin: 0px 0px 16px 0px;
 		}
+	}
 
-		&__list {
-		}
+	&__list::before {
+		content: '';
+		position: absolute;
+		width: 309px;
+		height: 2px;
+		background: #F5F6FA;
+		top: 0;
+		left: 50%;
+		margin: 0px 0px 0px -165px;
+	}
 
-		&__item {
-		}
+	&__item {
+		background: url('../IMG/subscribe-checkmark.png') 0 0 / 20px 20px no-repeat;
+		font-size: 14px;
+		line-height: 157%;
+		color: #63657E;
+		padding: 0px 0px 0px 30px;
+	}
 
-		&__button {
-		}
+	&__button {
+		display: block;
+		padding: 21px 0px;
+		width: 285px;
+		text-align: center;
+		color: #293FCC;
+		background: #E5F1FF;
+		border-radius: 10px;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 128%;
+		transition: all 0.2s ease 0s;
+	}
+	&__button:hover {
+		transform: scale(1.03);
+		color: #E5F1FF;
+		background:  #293FCC;
+	}
+	transition: all 0.3s ease 0s;
 }
-.costJS {
+.card-subs:hover {
+	background: #FFFFFF;
+	border: 2px solid #F5F6FA;
+	box-sizing: border-box;
+	box-shadow: 0px 20px 47px rgba(0, 0, 0, 0.05);
+	border-radius: 15px;
+}
+
+/*ADAPTIVE*/
+@media (max-width: 1495px) {
+	.card-subs {
+		&:nth-child(2) {
+			margin: 0px 30px;
+		}
+		background: #FFFFFF;
+		border: 2px solid #F5F6FA;
+		box-sizing: border-box;
+		border-radius: 15px;
+		padding: 43px 23px 51px 42px;
+		max-width: 320px;
+		&__button {
+			width: 260px;
+		}
+	}
+}
+@media (max-width: 1370px) {
+	.subscribe-wrapper {
+		._container {
+			width: 98%;
+		}
+	}
+}
+@media (max-width: 1080px) {
+	.subscribe__cards-wrapper {
+		justify-content: space-around;
+		flex-wrap: wrap;
+	}
+	.card-subs {
+		&:nth-child(2) {
+			margin: 0px 0px;
+		}
+	}
+}
+@media (max-width: 1024px) {
+	.subscribe-wrapper {
+		background: #F0F4FF;
+		padding: 50px 0;
+	}
+}
+@media (max-width: 425px) {
+	.subscribe {
+		&__title {
+			font-size: 30px;
+			line-height: 150%;
+		}
+	
+		&__description {
+			font-size: 16px;
+			line-height: 150%;
+		}
+	
+		&__radiobutton-block {
+			font-size: 16px;
+		}
+	}
+	.card-subs {
+		border: none;
+		border-radius: 0;
+		padding: 20px 23px 20px 42px;
+		&__title {
+			font-style: normal;
+			font-weight: 600;
+			font-size: 28px;
+			line-height: 139%;
+			color: #090F4E;
+			margin: 0px 0px 10px 0px;
+		}
+	
+		&__description {
+			font-size: 16px;
+			line-height: 187%;
+			color: #63657E;
+			margin: 0px 0px 10px 0px;
+		}
+	
+		&__cost {
+			font-weight: 500;
+			font-size: 16px;
+			line-height: 137%;
+			color: #63657E;
+			margin: 0px 0px 20px 0px;
+			.costCSS {
+				font-weight: 600;
+				font-size: 42px;
+				line-height: 121%;
+				color: #090F4E;
+				margin: 0px 5px 0px 0px;
+			}
+		}
+	
+		&__list::before {
+			content: '';
+			width: 200px;
+			left: 50%;
+			margin: 0px 0px 0px -120px;
+		}
+	
+		&__button {
+			width: 230px;
+			font-size: 16px;
+		}
+	}
+	.card-subs:hover {
+		background: #FFFFFF;
+		border: none;
+		box-shadow: none;
+		border-radius: 0;
+	}
+	
+}
+//-------------------------------------
+/*SECTION*/
+.signup-wrapper {
+	padding: 50px 0px;
+}
+.signup-bg {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	opacity: 0.08;
+}
+.signup {
+	position: relative;
+	min-height: 360px;
+	border-radius: 30px;
+	background: #E7F5FF;
+	padding: 68px 20px;
+	&__title {
+		font-weight: 600;
+		font-size: 36px;
+		line-height: 54px;
+		text-align: center;
+		color: #090F4E;
+		margin: 0px 0px 13px 0px;
+	}
+
+	&__description {
+		font-size: 18px;
+		line-height: 167%;
+		text-align: center;
+		color: #63657E;
+		margin: 0px 0px 30px 0px;
+	}
+
+	&__form {
+		position: relative;
+		z-index: 2;
+		width: 480px;
+		position: relative;
+		margin: 0 auto;
+	}
+
+	&__input {
+		width: 100%;
+		height: 67px;
+		border-radius: 50px;
+		padding: 20px 65px 20px 35px;
+	}
+
+	&__button {
+		position: absolute;
+		right: 10px;
+		top: 11px;
+		background: transparent;
+		border: none;
+	}
+}
+/*ADAPTIVE*/
+@media (max-width: 572px) {
+	.signup {
+		min-height: 300px;
+		padding: 40px 20px;
+		&__title {
+			line-height: 40px;
+		}
+		&__description {
+			font-size: 16px;
+			line-height: 130%;
+		}
+		&__form {
+			width: 240px;
+		}
+	
+		&__input {
+			padding: 20px 65px 20px 15px;
+		}
+	}
 }
 //-------------------------------------

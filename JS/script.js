@@ -44,12 +44,39 @@ $('.slider').slick({
 /*RADIOBUTTON*/
 
 const radioButton = document.querySelector('#radiobutton');
+const time = document.querySelectorAll('#time');
+const cost = document.querySelectorAll('.costJS');
+
 let isLeft = true;
 
 function changeRadioButton () {
 	radioButton.firstChild.classList.toggle('right');
 	radioButton.firstChild.classList.toggle('left');
 	isLeft = !isLeft;
+	if (isLeft) {
+		time.forEach(item => {
+			item.innerHTML = 'Month';
+		});
+		cost.forEach(item => {
+			let costin = item.innerHTML;
+			if (costin != 0) {
+				let costin2 = costin / 12 + 5;
+				item.innerHTML = costin2.toString();
+			}
+		});
+	} else if(!isLeft) {
+		time.forEach(item => {
+			item.innerHTML = 'Year';
+		});
+		cost.forEach(item => {
+			let costin = item.innerHTML;
+			if (costin != 0) {
+				let costin2 = (costin - 5) * 12;
+				item.innerHTML = costin2.toString();
+			}
+		});
+	}
+
 }
 
 radioButton.addEventListener('click', changeRadioButton);

@@ -297,7 +297,7 @@ body.lock {
 @media (max-width: 1440px) {
 	.welcome-wrapper {
 		margin: -113px 0px 0px 0px;
-		padding: 40px 0px 0px 0px;
+		padding: 180px 0px 0px 0px;
 	}
 	.inform {
 		position: relative;
@@ -335,7 +335,12 @@ body.lock {
 	}
 }
 @media (max-width: 1140px) {
+	.welcome-wrapper {
+		margin: -113px 0px 0px 0px;
+		padding: 160px 0px 30px 0px;
+	}
 	.welcome {
+		
 		&__inform {
 			margin: 0px 35px 0px 0px;
 		}
@@ -521,6 +526,7 @@ body.lock {
 	position: absolute;
 	z-index: 1;
 	
+	
 }
 .points1 {
 	top: -59px;
@@ -532,10 +538,16 @@ body.lock {
 }
 
 /*ADAPTIVE*/
+@media (max-width: 1140px) {
+	.points1,
+	.points2 {
+		display: none;
+	}
+}
 @media (max-width: 830px) {
 	.perfectsol-wrapper {
 		margin: 10px 0px 0px 0px;
-		padding: 0px 0px 50px 0px;
+		padding: 0px 0px 0px 0px;
 	}
 	.perfectsol {
 		&__cards-wrapper {
@@ -543,6 +555,9 @@ body.lock {
 			justify-content: space-between;
 			align-items: center;
 			position: relative;
+			:not(:last-child) {
+				margin: 0px 0px 15px 0px;
+			}
 		}
 		&__cards-wrapper:not(:last-child) {
 			margin: 0px 0px 30px 0px;
@@ -615,9 +630,6 @@ body.lock {
 		color: #63657E;
 		margin: 0px 0px 57px 0px;
 	}
-
-	&__dashboard {
-	}
 }
 .dashboard {
 	position: relative;
@@ -652,8 +664,8 @@ body.lock {
 	
 		&__left {
 			width: 120px;
-			bottom: 26px;
-			left: -183px;
+			bottom: 120px;
+    		left: -63px;
 		}
 	
 		&__right {
@@ -723,7 +735,6 @@ body.lock {
 }
 .slide {
 	display: inline-block;
-
 	&__title {
 		font-size: 24px;
 		line-height: 167%;
@@ -821,14 +832,12 @@ body.lock {
 		padding: 50px 0px 50px 0px;
 	}
 	.slide {
-		margin: 0 auto;
-	}
-	.slide {
 		display: inline-block;
 		border-top: 2px solid #EBF0F4;
 		border-bottom: 2px solid #EBF0F4;
 		border-radius: 15px;
-		padding: 10px 0px;
+		margin: 0 auto;
+		padding: 10px 20px;
 		&__title {
 			font-size: 22px;
 			margin: 0px 0px 10px 0px;
@@ -871,7 +880,7 @@ body.lock {
 }
 @media (max-width: 425px) {
 	.reviews-wrapper {
-		padding: 20px 0px 20px 0px;
+		padding: 60px 0px 40px 0px;
 	}
 	.reviews {
 		position: relative;
@@ -882,6 +891,86 @@ body.lock {
 		}
 	}
 }
+//-------------------------------------
+/*SUBSCRIBE*/
+.subscribe-wrapper {
+	background: #F0F4FF;
+}
+.subscribe {
 
-//967
+	&__title {
+		font-weight: 600;
+		font-size: 30px;
+		line-height: 243%;
+		text-align: center;
+		color: #090F4E;
+	}
+
+	&__description {
+		font-size: 18px;
+		line-height: 200%;
+		text-align: center;
+		color: #63657E;
+	}
+
+	&__radiobutton-block {
+		font-weight: 500;
+		font-size: 18px;
+		line-height: 133%;
+		color: #63657E;
+		display: flex;
+		align-items: center;
+
+	}
+
+	&__radiobutton {
+		position: relative;
+		width: 56px;
+		height: 26px;
+		background: #2DCA8C;
+		border-radius: 20px;
+		margin: 0px 16px;
+		span {
+			top: 4px;
+			position: absolute;
+			width: 19px;
+			height: 18px;
+			border-radius: 50%;
+			background: #fff;
+		}
+		span.left {
+			left: 5px;
+			transition: all 0.3s ease 0s;
+		}
+		span.right {
+			left: 32px;
+			transition: all 0.3s ease 0s;
+		}
+	}
+
+	&__cards-wrapper {
+	}
+}
+.card-subs {
+
+		&__title {
+		}
+
+		&__description {
+		}
+
+		&__cost {
+		}
+
+		&__list {
+		}
+
+		&__item {
+		}
+
+		&__button {
+		}
+}
+.costJS {
+}
 //-------------------------------------

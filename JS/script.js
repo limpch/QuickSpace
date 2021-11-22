@@ -18,30 +18,40 @@ document.addEventListener('click', (event) => {
 /*=======================================================================================*/
 
 /*SLIDER*/
+
 $('.slider').slick({
 	infinite: false,
+	autoplay: false,
   	slidesToShow: 2,
   	slidesToScroll: 2,
-	  	responsive: [
-			{
-				breakpoint: 967,
-				settings: {
-					infinite: false,
-					slidesToShow: 1,
-					slidesToScroll: 1,
-				}
-			},
-			{
-				breakpoint: 425,
-				settings: {
-					infinite: true,
-					slidesToShow: 1,
-					slidesToScroll: 1,
-					autoplay: true,
-					arrows: false,
-					autoplaySpeed: 3000
-				}
+	responsive: [
+		{
+			breakpoint: 967,
+			settings: {
+				autoplay: false,
+				infinite: false,
+				slidesToShow: 1,
+				slidesToScroll: 1,
+				autoplaySpeed: 3000,
+				arrows: false,
 			}
-	  	]
+		}
+	]
 });
+
+/*=======================================================================================*/
+
+/*RADIOBUTTON*/
+
+const radioButton = document.querySelector('#radiobutton');
+let isLeft = true;
+
+function changeRadioButton () {
+	radioButton.firstChild.classList.toggle('right');
+	radioButton.firstChild.classList.toggle('left');
+	isLeft = !isLeft;
+}
+
+radioButton.addEventListener('click', changeRadioButton);
+
 /*=======================================================================================*/

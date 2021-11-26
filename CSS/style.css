@@ -1476,3 +1476,148 @@ body.lock {
     padding: 20px 65px 20px 15px;
   }
 }
+
+/*FOOTER*/
+.footer {
+  padding: 40px 0px 37px 0px;
+}
+
+.footer__grid {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.logo-column__logo {
+  margin: 0px 0px 44px 0px;
+}
+
+.logo-column__logo-img {
+  max-width: 211px;
+}
+
+.logo-column__list {
+  display: block;
+}
+
+.logo-column__list :not(:last-child) {
+  margin: 0px 0px 24px 0px;
+}
+
+.logo-column__item-email, .logo-column__item-phone {
+  font-size: 20px;
+  line-height: 150%;
+  color: #63657E;
+  padding: 0px 0px 0px 38px;
+}
+
+.logo-column__item-email {
+  background: url("../IMG/footer-mail.png") 0 50%/24px no-repeat;
+}
+
+.logo-column__item-phone {
+  background: url("../IMG/footer-phone.png") 0 50%/24px no-repeat;
+}
+
+.pages-column__title,
+.home-column__title {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 33px;
+  color: #090F4E;
+  margin: 0px 0px 44px 0px;
+}
+
+.pages-column__list :not(:last-child),
+.home-column__list :not(:last-child) {
+  margin: 0px 0px 15px 0px;
+}
+
+.pages-column__link,
+.home-column__link {
+  font-size: 18px;
+  line-height: 30px;
+  color: #63657E;
+}
+
+.pages-column__link:hover,
+.home-column__link:hover {
+  text-decoration: underline;
+}
+
+.adress-column__title {
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 33px;
+  color: #090F4E;
+  margin: 0px 0px 44px 0px;
+}
+
+.adress-column__adress {
+  background: url("../IMG/footer-locate.png") 0 3px/24px no-repeat;
+  display: block;
+  padding: 0px 0px 0px 38px;
+  font-size: 18px;
+  line-height: 167%;
+  color: #63657E;
+  margin: 0px 0px 44px 0px;
+}
+
+.adress-column__icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.adress-column__icons :not(:last-child) {
+  margin: 0px 20px 0px 0px;
+}
+
+.adress-column__icon {
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.adress-column__icon:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+.copyright {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 110px 0px 0px 0px;
+}
+
+.copyright__text {
+  font-size: 16px;
+  line-height: 187%;
+  color: #63657E;
+}
+
+.copyright__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.copyright__item {
+  margin: 0px 20px;
+}
+
+.copyright__link {
+  font-size: 16px;
+  line-height: 187%;
+  color: #63657E;
+}
+
+.copyright__link:hover {
+  text-decoration: underline;
+}

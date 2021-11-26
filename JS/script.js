@@ -82,3 +82,28 @@ function changeRadioButton () {
 radioButton.addEventListener('click', changeRadioButton);
 
 /*=======================================================================================*/
+
+
+/*BUTTON GO UP*/
+
+const btnGoUp = document.querySelector('.go-up');
+
+btnGoUp.addEventListener('click', () => {
+	if(btnGoUp.classList.contains('active')) {
+		document.querySelector('.header').scrollIntoView( {
+			behavior: 'smooth',
+			block: 'start'
+		});
+	}
+});
+
+window.addEventListener('scroll', () => {
+	if(window.scrollY > 800) {
+		btnGoUp.classList.add('active');
+	} else {
+		btnGoUp.preventDefault;
+		btnGoUp.classList.remove('active');
+	}
+});
+
+/*=======================================================================================*/

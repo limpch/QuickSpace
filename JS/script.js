@@ -44,7 +44,7 @@ $('.slider').slick({
 /*RADIOBUTTON*/
 
 const radioButton = document.querySelector('#radiobutton');
-const time = document.querySelectorAll('#time');
+const time = document.querySelectorAll('.time');
 const cost = document.querySelectorAll('.costJS');
 
 let isLeft = true;
